@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
+<style>
+    /* .custom-margin{
+        margin-top:20px;
+    } */
+    #divv{
+        background-color:white;
+        margin-top:50px;
+        margin-bottom:150px;
+        margin-left:110px;
+        margin-right:110px;
+    
+    }
+    #bol{
+    font-weight: bold;
+    }
+    body{
+        background-image:url('w.png');
+    }
+      #uppar{
+          color:#373737;
+       padding-left:100px;
+       padding-top:20px;
+    } 
+    body div img{
+     height:60%;
+     width:300px;
+     padding-left:120px;
+     padding-top:50px;
+    }
+    #reCAPTCHA{
+        color:gray;
+        padding-top: 20px;
+    }
+    #california{
+        color:gray;  
+        padding-top:20px;
+    }
+    #version{
+        color:gray; 
+        padding-top:20px; 
+    }
+    /* a:active{
+        color:red;
+    }
+     */
+</style>
+<script>
+function Validation(){
+    var mail=document.getElementById("mail").value;
+       if(mail==="") {
+           document.getElementById("emai").innerHTML="*Please enter your Email";
+           return false;
+           }
+           if((mail.indexOf("@")<1) || (mail.lastIndexOf(".")>=mail.length-2) || (mail.lastIndexOf(".")-mail.indexOf("@")<3))
+        {
+            document.getElementById("emai").innerHTML="*invalid";
+            return false;
+        }
+var pasdw=document.getElementById("pasd").value;
+if(pasdw===""){
+    document.getElementById("p").innerHTML="*Please enter your password";
+    return false;
+}
+    if((pasdw.length<=4) || (pasdw.length>=20)){
+        document.getElementById("p").innerHTML="characters must be between 5 and 20";
+        return false;
+    }    
+}
+// function small(){
+// var element=document.getElementById("uppar");
+// element.style.color="blue";
+// document.write(element);
+// }
+    </script>
+
+<body>
+    
+
+    <div class="container" onsubmit="return Validation()" >
+        <img src="download.png">
+       <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+        <h4 id="uppar" class="font-weight-bold">Reservation at Culinaria Mediterranean Kitchen</h4></div>
+       <div class="col-lg-4 col-sm-4 pt-5"><a href="table.html">Back to the Reservation</a></div>
+            </div>
+            <div id="divv">
+            <div class="row justify-content-center font-weight-bold custom-margin">
+           <div class="mt-4 col-lg-7 col-md-7 col-sm-7">
+    
+            <h4 style="padding-left:70px;">Sign In To &nbsp;OpenTable</h4>
+                <form class="mt-3 ">
+                    <!--email-->
+                    <div class="form-group">
+                    
+                      <input type="text" name="Email" class="form-control" placeholder="Email" id="mail">
+                      <!-- <small class="form-text">we'll never share your email with anyone else.</small> -->
+                            <small id="emai" class="text-danger font-weight-bold"></small></div>
+
+                     <div class="form-group py-3">
+                
+                      <input type="Password" name="Password"  class="form-control" placeholder="Password" id="pasd">
+                      
+                                      <small id="p" class="text-danger font-weight-bold"></small>  
+                      </div>
+
+                      <div class="mb-3">
+                      <input type="submit" value="Sign In" class="btn btn-danger btn-block font-weight-bold mt-3">
+                      </div>
+                     
+                </form>
+                <div>
+<small id="reCAPTCHA">
+    This page is protected by reCAPTCHA; Google's &nbsp;<a href=" https://policies.google.com/privacy?hl=en-US  ">privacy policy</a> and <a href="https://policies.google.com/terms?hl=en-US">terms</a> of <a href="https://policies.google.com/terms?hl=en-US">use</a> apply .
+</small></div>
+<div>
+<small id="california">
+    If you are a California consumer, you can choose to use your information by clicking Do Not Sell My Information.
+</small></div>
+<div>
+    <small id="version">
+    (Build Version: UserSite_1.0.1793.prod.na) (Machine Name: SC-NA-MYOT-206) (OT-RequestId: c1eaf166-6bbc-4c71-bd53-d1bbb2f280b0)
+
+    </small></div>
+
+
+
+</div>
+</div>
+</div>
+    </div>
+
+</body>
+</html>

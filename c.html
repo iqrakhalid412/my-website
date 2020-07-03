@@ -9,6 +9,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+   
 /* squarespace */
 #square{
 
@@ -142,36 +143,46 @@ padding-bottom:0px;
  function w(){
    var x=document.getElementById("w");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
  function men(){
    var x=document.getElementById("men");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
   
  }
  function b(){
    var x=document.getElementById("b");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
  function re(){
    var x=document.getElementById("re");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
  function ct(){
    var x=document.getElementById("ct");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
 
  function em(){
    var x=document.getElementById("em");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
+//  function same(){
+//   document.getElementById("w").style.color="white";
+//   document.getElementById("men").style.color="white";
+//   document.getElementById("b").style.color="white";
+//   document.getElementById("re").style.color="white";
+//   document.getElementById("ct").style.color="white";
+//   document.getElementById("em").style.color="white";
+//  }
+function fos(element){
+element.style.textDecoration="overline gray";
+element.style.color="gray";
+}
+function blu(e){
+  e.style.color="white";
+  e.style.textDecoration="";
 
+}
 
 //contact
      // for user
@@ -237,7 +248,7 @@ function blur(){
     <img src="logo.png" >
   </div>
   
-    <a class="navbar-brand ml-4 mt-5 "  style="color: white;" id="w" onclick="w()"  href="#wel">WELCOME</a>
+    <a class="navbar-brand ml-4 mt-5 "  style="color: white;" id="w" onfocus="fos(this)" onblur="blu(this)" onclick="w()"  href="#wel">WELCOME</a>
    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -247,7 +258,7 @@ function blur(){
      
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="navbar-brand mt-5 color" style="color: white;" id="men" onclick="men()" href="#m" >MENU</a>
+          <a class="navbar-brand mt-5 color" style="color: white;" id="men" onfocus="fos(this)"  onblur="blu(this)" onclick="men()"  href="#m" >MENU</a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -255,7 +266,7 @@ function blur(){
          <!-- <a class="nav-link" href="#">Reservations</a> -->
         </li>
         <li class="nav-item " >
-          <a class="navbar-brand mt-5 color" style="color: white;" id="b" onclick="b()" href="#barb">BAR & BAVERAGES</a>
+          <a class="navbar-brand mt-5 color" style="color: white;" id="b" onfocus="fos(this)"  onblur="blu(this)" onclick="b()"  href="#barb">BAR & BAVERAGES</a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
@@ -263,7 +274,7 @@ function blur(){
           <!-- <a class="nav-link" href="#" id="n">Bar $Bevrages <span class="sr-only">(current)</span></a> -->
         </li>
         <li class="nav-item">
-          <a class="navbar-brand mt-5 "style="color: white;" id="re" onclick="re()" href="#r" >RESERVATIONS</a>
+          <a class="navbar-brand mt-5 "style="color: white;" id="re" onfocus="fos(this)"  onblur="blu(this)" onclick="re()"  href="#r" >RESERVATIONS</a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
@@ -271,7 +282,7 @@ function blur(){
           <!-- <a class="nav-link" href="#">Reservations</a> -->
         </li>
         <li class="nav-item">
-          <a class="navbar-brand mt-5 " style="color: white;" id="ct" onclick="ct()"href="#c" >CONTACT US</a>
+          <a class="navbar-brand mt-5 " style="color: white;" id="ct" onfocus="fos(this)"  onblur="blu(this)" onclick="ct()"  href="#c" >CONTACT US</a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
@@ -282,7 +293,7 @@ function blur(){
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>-->
         <li class="nav-item active" >
-          <a class="navbar-brand mt-5 " style="color: white;" id="em" onclick="em()" href="#empl">EMPLOYMENT</a>
+          <a class="navbar-brand mt-5 " style="color: white;" id="em" onfocus="fos(this)"   onblur="blu(this)" onclick="em()"  href="#empl">EMPLOYMENT</a>
       </li>
       </ul>
      
@@ -1142,7 +1153,7 @@ function blur(){
         </div>
 </div >
 <div style="margin:0" class="jumbotron jumbotron-fluid mt-5 bg-info" id="jumb">
-  <i class="fa fa-facebook-f fa-2x"></i>
+  <!-- <i class="fa fa-facebook-f fa-2x"></i> -->
   <div class="container-fluid text-center text-secondary " id="cont" style="background-color: black; padding-bottom:150px;">
     Powered by <a id="square" href="https://www.squarespace.com/"  target="_blank" >Squarespace</a>
 
