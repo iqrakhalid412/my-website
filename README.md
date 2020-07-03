@@ -9,11 +9,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-/* squarespace */
-#square{
-
-   color:gray;
-}
 /* background image */
 
 html{
@@ -59,7 +54,6 @@ padding-bottom:0px;
 } 
  </style>
  <script>
-
 
    //employment
     function valid(){
@@ -142,34 +136,28 @@ padding-bottom:0px;
  function w(){
    var x=document.getElementById("w");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
  function men(){
    var x=document.getElementById("men");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
   
  }
  function b(){
    var x=document.getElementById("b");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
  function re(){
    var x=document.getElementById("re");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
  function ct(){
    var x=document.getElementById("ct");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
 
  function em(){
    var x=document.getElementById("em");
    x.style.color="gray";
-   x.style.textDecoration="overline gray";
  }
 
 
@@ -880,7 +868,7 @@ function blur(){
     <img src="re.jpg">
     <div class="container-fluid py-5 bg-secondary">
     <h1 class="text-center pt-4">Make a Reservation</h1>
-   <div class="text-center"> <a href="table.html"><button type="Submit" class="btn btn-primary "> Find A Table</button></a><br>
+   <div class="text-center"> <button type="Submit" class="btn btn-primary "> Find A Table</button><br>
    <br class="text-primary">
     Having difficulties making a reservation?
   <br>
@@ -1141,12 +1129,12 @@ function blur(){
 </div>
         </div>
 </div >
-<div style="margin:0" class="jumbotron jumbotron-fluid mt-5 bg-info" id="jumb">
+<div class="jumbotron jumbotron-fluid mt-5 bg-info" id="jumb">
   <i class="fa fa-facebook-f fa-2x"></i>
-  <div class="container-fluid text-center text-secondary " id="cont" style="background-color: black; padding-bottom:150px;">
-    Powered by <a id="square" href="https://www.squarespace.com/"  target="_blank" >Squarespace</a>
+  <div class="container-fluid text-center text-secondary " id="cont" style="background-color: black; padding-bottom:120px;">
+    <div style="padding-top:70px">Powered by Squarespace</div>
 
-    </div>
+    
   </div>
 </div>
 
@@ -1160,9 +1148,6 @@ function blur(){
 
 
  
-
-
-
 
 
 
