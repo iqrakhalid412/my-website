@@ -68,7 +68,7 @@ padding-bottom:0px;
                 document.getElementById("usrname").innerHTML="*required user name";
                 return(false);
             }
-            if(us.length<=2 || user.length>=10){
+            if(us.length<=2 || us.length>=10){
                 document.getElementById("usrname").innerHTML="*characters must be between 2 & 10";
                 return(false);
             }
@@ -76,26 +76,56 @@ padding-bottom:0px;
                 document.getElementById("usrname").innerHTML="*only characters required";
                 return(false);
             }
+
+
+
+///lastname
+
+            var usr=document.getElementById("usr").value;
+            if(usr==""){
+                document.getElementById("lstnme").innerHTML="*required user name";
+                return(false);
+            }
+            if(usr.length<=2 || usr.length>=10){
+                document.getElementById("lstnme").innerHTML="*characters must be between 2 & 10";
+                return(false);
+            }
+            if(!isNaN(usr)){
+                document.getElementById("lstnme").innerHTML="*only characters required";
+                return(false);
+            }
+
+
+
+
+
+
+
+
          var phone=document.getElementById("ph").value;
         if(phone=="")
         {
           document.getElementById("phn").innerHTML="*required phone number";
           return(false);
         }
-        if(phone.length<0 || phone.length>11){
+        if(phone.length>0 && phone.length<11){
           document.getElementById("phn").innerHTML="*invalid phone number";
           return(false);
 
         }
+        //email
             var x=document.getElementById("eml").value;
             if(x==""){
-                document.getElementById("em").innerHTML="*required email address";
+                document.getElementById("employe").innerHTML="*required email address";
                 return (false);
             }
             if((x.indexOf('@')<1) || (x.lastIndexOf('.')>=x.length-2) || (x.lastIndexOf('.')-x.indexOf('@')<3)){
-                document.getElementById("em").innerHTML="*invalid";
+                document.getElementById("employe").innerHTML="*invalid";
                 return(false);
         }
+
+
+
         var prior=document.getElementById("prior").value;
         if(prior=="")
         {
@@ -165,12 +195,49 @@ padding-bottom:0px;
    x.style.color="gray";
    x.style.textDecoration="overline gray";
  }
-
  function em(){
    var x=document.getElementById("em");
    x.style.color="gray";
    x.style.textDecoration="overline gray";
  }
+
+
+
+
+
+
+ //onmouseout
+ function v(){
+  var x=document.getElementById("w");
+  x.style.color="white";
+   x.style.textDecoration="";
+ }
+ function e(){
+  var x=document.getElementById("men");
+  x.style.color="white";
+   x.style.textDecoration="";
+ }
+ function s(){
+  var x=document.getElementById("b");
+  x.style.color="white";
+   x.style.textDecoration="";
+ }
+ function reve(){
+  var x=document.getElementById("re");
+  x.style.color="white";
+   x.style.textDecoration="";
+ }
+ function count(){
+  var x=document.getElementById("ct");
+  x.style.color="white";
+   x.style.textDecoration="";
+ }
+ function pl(){
+  var x=document.getElementById("em");
+  x.style.color="white";
+   x.style.textDecoration="";
+ }
+
 
 
 //contact
@@ -189,6 +256,29 @@ function validation(){
         if(!isNaN(user)){
             document.getElementById("username").innerHTML="*only characters are allowed";
             return false;}
+
+
+/////lastuser
+            var lastuser=document.getElementById("lastuser").value;
+        if(lastuser===""){
+            document.getElementById("lastname").innerHTML="*Name is required";
+            return(false);
+        }
+        if((lastuser.length<=2) || (lastuser.length>=20))
+        {
+            document.getElementById("lastname").innerHTML="*user length must be between 2 and 20";
+            return false;
+        }
+        if(!isNaN(lastuser)){
+            document.getElementById("lastname").innerHTML="*only characters are allowed";
+            return false;}
+
+
+
+
+
+
+
     //for email
         var email=document.getElementById("email").value;
         if(email===""){
@@ -237,7 +327,7 @@ function blur(){
     <img src="logo.png" >
   </div>
   
-    <a class="navbar-brand ml-4 mt-5 "  style="color: white;" id="w" onclick="w()"  href="#wel">WELCOME</a>
+    <a class="navbar-brand ml-4 mt-5 "  style="color: white;" id="w" onclick="w()"  onmouseenter="w()" onmouseout="v()"  href="#wel">WELCOME</a>
    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -247,7 +337,7 @@ function blur(){
      
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="navbar-brand mt-5 color" style="color: white;" id="men" onclick="men()" href="#m" >MENU</a>
+          <a class="navbar-brand mt-5 color" style="color: white;" id="men" onclick="men()" onmouseenter="men()" onmouseout="e()"  href="#m" >MENU</a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -255,7 +345,7 @@ function blur(){
          <!-- <a class="nav-link" href="#">Reservations</a> -->
         </li>
         <li class="nav-item " >
-          <a class="navbar-brand mt-5 color" style="color: white;" id="b" onclick="b()" href="#barb">BAR & BAVERAGES</a>
+          <a class="navbar-brand mt-5 color" style="color: white;" id="b" onclick="b()"  onmouseenter="b()" onmouseout="s()" href="#barb">BAR & BAVERAGES</a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
@@ -263,7 +353,7 @@ function blur(){
           <!-- <a class="nav-link" href="#" id="n">Bar $Bevrages <span class="sr-only">(current)</span></a> -->
         </li>
         <li class="nav-item">
-          <a class="navbar-brand mt-5 "style="color: white;" id="re" onclick="re()" href="#r" >RESERVATIONS</a>
+          <a class="navbar-brand mt-5 "style="color: white;" id="re" onclick="re()" onmouseenter="re()" onmouseout="reve()"  href="#r" >RESERVATIONS</a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
@@ -271,7 +361,7 @@ function blur(){
           <!-- <a class="nav-link" href="#">Reservations</a> -->
         </li>
         <li class="nav-item">
-          <a class="navbar-brand mt-5 " style="color: white;" id="ct" onclick="ct()"href="#c" >CONTACT US</a>
+          <a class="navbar-brand mt-5 " style="color: white;" id="ct" onclick="ct()" onmouseenter="ct()" onmouseout="count()" href="#c" >CONTACT US</a>
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> -->
@@ -282,7 +372,7 @@ function blur(){
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>-->
         <li class="nav-item active" >
-          <a class="navbar-brand mt-5 " style="color: white;" id="em" onclick="em()" href="#empl">EMPLOYMENT</a>
+          <a class="navbar-brand mt-5 " style="color: white;" id="em" onclick="em()" onmouseenter="em()" onmouseout="pl()"  href="#empl">EMPLOYMENT</a>
       </li>
       </ul>
      
@@ -880,7 +970,7 @@ function blur(){
     <img src="re.jpg">
     <div class="container-fluid py-5 bg-secondary">
     <h1 class="text-center pt-4">Make a Reservation</h1>
-   <div class="text-center"> <a href="table.html"><button type="Submit" class="btn btn-primary "> Find A Table</button></a><br>
+   <div class="text-center"> <a href="table.html"><button type="Submit" class="btn btn-outline-light "> Find A Table</button></a><br>
    <br class="text-primary">
     Having difficulties making a reservation?
   <br>
@@ -931,8 +1021,9 @@ function blur(){
 
               <div class=  "form-group col-md-6 pt-5">
 
-                  <input type="text" name="LastName" class="form-control" id="user">
+                  <input type="text" name="LastName" class="form-control" id="lastuser">
                   <label>LastName</label>
+                  <div> <span id="lastname" class="text-light bg-danger"></span></div>
                 </div>
                 </div>
            
@@ -1000,32 +1091,35 @@ function blur(){
                   <!-- name -->
                   <label>Name*</label>
                   <input type="text" name="name" class="form-control" id="us">
-                  <label>FirstName</label></div>
+                  <label>FirstName</label>
+                  <div>
+                    <span id="usrname" class="text-white bg-danger"></span></div>
+                </div>
 
 
                   <div class="form-group col-md-6 pt-5">
-                      <input type="text" name="name" class="form-control">
-                      <label>LastName</label></div>
+                      <input type="text" name="name" class="form-control" id="usr">
+                      <label>LastName</label>
+                      <div>
+                        <span id="lstnme" class="text-white bg-danger"></span></div>
+                    </div>
                 
                     
-                    <div>
-                    <span id="usrname" class="text-white bg-danger"></span></div>
+                   
                      </div>
               <!-- phone# -->
                 <div class="form-row">
               <div class="form-group col-md-3 pt-3">
                    <label >Phone*</label> 
               <input type="phone number" class="form-control"id="ph">
-              </div>
-
-                </div>
-              <div><span id="phn" class="text-light bg-danger"></span></div>
+              <div><span id="phn" class="text-light bg-danger"></span></div> </div></div>
                 <!-- email -->
-              <div class="form-group">
+                <div class="form-row">
+              <div class="form-group col-md-5">
                 <label>Email</label>
-                <input type="text" name="email" class="form-control" id="eml"> </div>
-                <div><span id="em" class="text-light bg-danger"></span>
-                </div>
+                <input type="text" name="email" class="form-control" id="eml"> 
+                <div><span id="employe" class="text-light bg-danger"></span>
+                </div></div></div>
 
 
 

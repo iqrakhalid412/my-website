@@ -69,7 +69,7 @@ padding-bottom:0px;
                 document.getElementById("usrname").innerHTML="*required user name";
                 return(false);
             }
-            if(us.length<=2 || user.length>=10){
+            if(us.length<=2 || us.length>=10){
                 document.getElementById("usrname").innerHTML="*characters must be between 2 & 10";
                 return(false);
             }
@@ -77,6 +77,29 @@ padding-bottom:0px;
                 document.getElementById("usrname").innerHTML="*only characters required";
                 return(false);
             }
+
+
+
+
+////lastuser
+            var usr=document.getElementById("usr").value;
+            if(usr==""){
+                document.getElementById("lstnme").innerHTML="*required user name";
+                return(false);
+            }
+            if(usr.length<=2 || usr.length>=10){
+                document.getElementById("lstnme").innerHTML="*characters must be between 2 & 10";
+                return(false);
+            }
+            if(!isNaN(usr)){
+                document.getElementById("lstnme").innerHTML="*only characters required";
+                return(false);
+            }
+
+
+
+
+
          var phone=document.getElementById("ph").value;
         if(phone=="")
         {
@@ -199,6 +222,25 @@ function validation(){
         }
         if(!isNaN(user)){
             document.getElementById("username").innerHTML="*only characters are allowed";
+            return false;}
+
+
+
+
+
+    //lastuser
+          var lastuser=document.getElementById("lastuser").value;
+        if(lastuser===""){
+            document.getElementById("lastname").innerHTML="*Name is required";
+            return(false);
+        }
+        if((lastuser.length<=2) || (lastuser.length>=20))
+        {
+            document.getElementById("lastname").innerHTML="*user length must be between 2 and 20";
+            return false;
+        }
+        if(!isNaN(lastuser)){
+            document.getElementById("lastname").innerHTML="*only characters are allowed";
             return false;}
     //for email
         var email=document.getElementById("email").value;
@@ -891,7 +933,7 @@ function blur(){
     <img src="re.jpg">
     <div class="container-fluid py-5 bg-secondary">
     <h1 class="text-center pt-4">Make a Reservation</h1>
-   <div class="text-center"> <a href="table.html"><button type="Submit" class="btn btn-primary "> Find A Table</button></a><br>
+   <div class="text-center"> <a href="table.html"><button type="Submit" class="btn btn-outline-light"> Find A Table</button></a><br>
    <br class="text-primary">
     Having difficulties making a reservation?
   <br>
@@ -942,8 +984,9 @@ function blur(){
 
               <div class=  "form-group col-md-6 pt-5">
 
-                  <input type="text" name="LastName" class="form-control" id="user">
-                  <label>LastName</label>
+                  <input type="text" name="LastName" class="form-control" id="lastuser">
+                 <label>LastName</label>
+                  <div> <span id="lastname" class="text-light bg-danger"></span></div>
                 </div>
                 </div>
            
@@ -1011,16 +1054,19 @@ function blur(){
                   <!-- name -->
                   <label>Name*</label>
                   <input type="text" name="name" class="form-control" id="us">
-                  <label>FirstName</label></div>
+                  <label>FirstName</label>
+                  <div>
+                    <span id="usrname" class="text-white bg-danger"></span></div>
+                </div>
 
 
                   <div class="form-group col-md-6 pt-5">
-                      <input type="text" name="name" class="form-control">
-                      <label>LastName</label></div>
-                
-                    
-                    <div>
-                    <span id="usrname" class="text-white bg-danger"></span></div>
+                      <input type="text" name="name" class="form-control"  id="usr">
+                      <label>LastName</label>
+                      <div>
+                        <span id="lstnme" class="text-white bg-danger"></span></div>
+                      </div>
+                   
                      </div>
               <!-- phone# -->
                 <div class="form-row">
